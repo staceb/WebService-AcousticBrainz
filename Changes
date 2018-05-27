@@ -1,4 +1,7 @@
 Revision history for WebService-AcousticBrainz
 
 {{$NEXT}}
+    - Improved documentation.
+
+0.01 2018-05-26 18:21:29
     - Minted by Dist::Zilla.
