@@ -109,9 +109,9 @@ __END__
 
 L<Moo>
 
-L<use Mojo::UserAgent>
+L<Mojo::UserAgent>
 
-L<use Mojo::JSON::MaybeXS>
+L<Mojo::JSON::MaybeXS>
 
 L<https://acousticbrainz.org/data>
 
