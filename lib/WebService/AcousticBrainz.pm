@@ -2,7 +2,7 @@ package WebService::AcousticBrainz;
 
 # ABSTRACT: Access to the AcousticBrainz API
 
-our $VERSION = '0.01';
+our $VERSION = '0.0101';
 
 use Moo;
 use strictures 2;
@@ -19,7 +19,8 @@ use Mojo::JSON qw( decode_json );
   my $w = WebService::AcousticBrainz->new;
   my $r = $w->fetch(
     mbid     => '96685213-a25c-4678-9a13-abd9ec81cf35',
-    endpoint => 'high-level'
+    endpoint => 'low-level',
+    query    => { n => 2 },
   );
 
 =head1 DESCRIPTION
@@ -107,6 +108,10 @@ __END__
 =head1 SEE ALSO
 
 L<Moo>
+
+L<use Mojo::UserAgent>
+
+L<use Mojo::JSON::MaybeXS>
 
 L<https://acousticbrainz.org/data>
 
