@@ -30,7 +30,7 @@ C<WebService::AcousticBrainz> provides access to the L<https://acousticbrainz.or
 
 =head2 base
 
-The base URL.  Default: https://api.hooktheory.com/v1/
+The base URL.  Default: https://acousticbrainz.org/api/v1
 
 =cut
 
