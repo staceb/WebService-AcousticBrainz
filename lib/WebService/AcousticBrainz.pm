@@ -2,7 +2,7 @@ package WebService::AcousticBrainz;
 
 # ABSTRACT: Access to the AcousticBrainz API
 
-our $VERSION = '0.0102';
+our $VERSION = '0.0103';
 
 use Moo;
 use strictures 2;
@@ -110,6 +110,8 @@ __END__
 L<Moo>
 
 L<Mojo::UserAgent>
+
+L<Mojo::JSON>
 
 L<Mojo::JSON::MaybeXS>
 
