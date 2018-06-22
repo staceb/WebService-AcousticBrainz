@@ -65,11 +65,11 @@ sub fetch {
         $query = join '&', map { "$_=$args{query}->{$_}" } keys %{ $args{query} };
     }
 
-    my $ua = Mojo::UserAgent->new;
-
     my $url = $self->base . '/'. $args{mbid} . '/'. $args{endpoint};
     $url .= '?' . $query
         if $query;
+
+    my $ua = Mojo::UserAgent->new;
 
     my $tx = $ua->get($url);
 
