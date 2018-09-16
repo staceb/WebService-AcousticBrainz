@@ -16,7 +16,9 @@ my $r = $w->fetch(
 my $stats = {};
 
 for my $stat ( keys %{ $r->{metadata}{tags} } ) {
-    my $val = ref($r->{metadata}{tags}{$stat}) eq 'ARRAY' ? $r->{metadata}{tags}{$stat}[0] : $r->{metadata}{tags}{$stat};
+    my $val = ref($r->{metadata}{tags}{$stat}) eq 'ARRAY'
+        ? $r->{metadata}{tags}{$stat}[0]
+        : $r->{metadata}{tags}{$stat};
     $stats->{$stat} = $val;
 }
 
