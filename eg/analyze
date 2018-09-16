@@ -16,6 +16,7 @@ my $r = $w->fetch(
 my $stats = {};
 
 for my $stat ( keys %{ $r->{metadata}{tags} } ) {
+    #next unless $stat eq 'title';
     my $val = ref($r->{metadata}{tags}{$stat}) eq 'ARRAY'
         ? $r->{metadata}{tags}{$stat}[0]
         : $r->{metadata}{tags}{$stat};
@@ -26,4 +27,4 @@ for my $stat ( keys %{ $r->{highlevel} } ) {
     $stats->{$stat} = $r->{highlevel}{$stat}{value};
 }
 
-use Data::Dumper;warn(__PACKAGE__,' ',__LINE__," MARK: ",Dumper$stats);
+use Data::Dumper;$Data::Dumper::Sortkeys = 1; warn(__PACKAGE__,' ',__LINE__," MARK: ",Dumper$stats);
